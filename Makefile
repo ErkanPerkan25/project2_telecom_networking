@@ -2,6 +2,8 @@ CXX ?= g++
 
 CXXFLAGS := -c -Wall -ansi -pedantic -std=c++20
 
+all: transmit flipBit reciver
+
 transmit: transmit.o
 	$(CXX) -o transmit transmit.o
 
