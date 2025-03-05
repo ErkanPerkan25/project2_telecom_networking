@@ -24,7 +24,7 @@ string XOR(string bits1, string bits2){
     return res;
 }
 
-string longDivison(string frame, string generator){
+bool longDivison(string frame, string generator){
 
     string bits = frame.substr(0,generator.size());
 
@@ -42,12 +42,20 @@ string longDivison(string frame, string generator){
 
     }
 
-    
-    frame.replace(frame.size()-bits.size()+1, frame.size(), bits);
+    bool status;
 
-    cout << bits << endl;
+    // check if it is zero or not
+    for(int i=0; i < bits.size(); i++){
+        if(bits[i] == '1'){
+            status = false;
+            break;
+        }
+        else {
+            status = true;
+        }
+    }
 
-    return frame;
+    return status;
 }
 
 
@@ -58,10 +66,12 @@ int main(int argc, char *argv[]){
     cin >> frame;
     cin >> generator;
 
-    for(int i=0; i < generator.size()-1; i++)
-        frame.push_back('0');
+    bool res = longDivison(frame, generator);
 
-    cout << longDivison(frame, generator) << endl;
+    if(res == true)
+        cout << "OK" << endl;
+    else
+        cout << "ERROR" << endl;
 
 
     return 0;

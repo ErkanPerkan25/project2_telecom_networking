@@ -25,9 +25,7 @@ int main(int argc, char *argv[]){
     cin >> generator;
 
     if (bitPos < 0) {
-        cout << frame << endl;
-        cout << generator << endl;
-        return 1;
+
     }
     else if (frame[bitPos] == '1') {
         frame[bitPos]  = '0';
