@@ -37,9 +37,9 @@ For running the programming with piping, here is the command:
 ./transmit | flipBit <bit postion> | ./reciver
 ```
 
-- Any known bugs?
+- Any known bugs? <br>
 Currently there are no bugs which is known of.
 
-- Overview of solving project:
+- Overview of solving project: <br>
 
 
