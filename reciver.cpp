@@ -31,27 +31,22 @@ bool longDivison(string frame, string generator){
     string zeroGen(generator.size(), '0');
 
 
-    for(int i=bits.size(); i <= frame.size(); i++){
-
+    for(int i=bits.size(); i < frame.size(); i++){
         if(bits[0] == '0')
             bits = XOR(bits, zeroGen);
         else
             bits = XOR(bits, generator);
 
         bits.push_back(frame[i]);
-
     }
 
-    bool status;
+    bool status = true;
 
     // check if it is zero or not
     for(int i=0; i < bits.size(); i++){
         if(bits[i] == '1'){
             status = false;
             break;
-        }
-        else {
-            status = true;
         }
     }
 

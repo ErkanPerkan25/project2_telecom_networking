@@ -34,8 +34,7 @@ int main(int argc, char *argv[]){
         frame[bitPos] = '1';
     }
 
-    cout << frame << endl;
-    cout << generator << endl;
+    cout << frame << endl << generator << endl;;
 
     return 0;
 }

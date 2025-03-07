@@ -41,7 +41,6 @@ string longDivison(string frame, string generator){
             bits = XOR(bits, generator);
 
         bits.push_back(frame[i]);
-
     }
 
     
@@ -62,6 +61,7 @@ int main(int argc, char *argv[]){
         frame.push_back('0');
 
     cout << longDivison(frame, generator) << endl;
+    cout << generator << endl;
 
     return 0;
 }
