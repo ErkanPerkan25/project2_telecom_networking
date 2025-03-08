@@ -1,14 +1,15 @@
 /************************************************************
 * Author: Eric Hansson
-* Date:
-* File:
-* Purpose:
+* Date: 03/08/2025
+* File: reciver.cpp
+* Purpose: To decode the transmitted CRC encoding
 ************************************************************/
 
 #include <iostream>
 
 using namespace std;
 
+// 
 string XOR(string bits1, string bits2){
     string res = "";
 
@@ -24,6 +25,7 @@ string XOR(string bits1, string bits2){
     return res;
 }
 
+// See if there is a remainder from the calculations
 bool longDivison(string frame, string generator){
 
     string bits = frame.substr(0,generator.size());
