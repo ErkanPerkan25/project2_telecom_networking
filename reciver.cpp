@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// 
+// For XOR-ing the bits
 string XOR(string bits1, string bits2){
     string res = "";
 
@@ -28,11 +28,14 @@ string XOR(string bits1, string bits2){
 // See if there is a remainder from the calculations
 bool longDivison(string frame, string generator){
 
+    // Starting bits
     string bits = frame.substr(0,generator.size());
 
+    // Bits of zeros when needed
     string zeroGen(generator.size(), '0');
 
 
+    // Goes throught the transmitted data
     for(int i=bits.size(); i < frame.size(); i++){
         if(bits[0] == '0')
             bits = XOR(bits, zeroGen);
@@ -44,7 +47,7 @@ bool longDivison(string frame, string generator){
 
     bool status = true;
 
-    // check if it is zero or not
+    // check if it there is a remainder or not
     for(int i=0; i < bits.size(); i++){
         if(bits[i] == '1'){
             status = false;
@@ -52,6 +55,7 @@ bool longDivison(string frame, string generator){
         }
     }
 
+    // returns true if no remainder and false if there is one
     return status;
 }
 
@@ -60,11 +64,14 @@ bool longDivison(string frame, string generator){
 int main(int argc, char *argv[]){
     string frame, generator;
     
+    // Reades in the transmitted and generator
     cin >> frame;
     cin >> generator;
 
+    // The result of decodig the transmitted data
     bool res = longDivison(frame, generator);
 
+        // Message to indicate if the transmitted data is good or not
     if(res == true)
         cout << "OK" << endl;
     else

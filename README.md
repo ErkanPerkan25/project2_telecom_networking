@@ -1,5 +1,5 @@
 # CRC Endoder, Bit Flipping, and CRC Decoder
-**project2_telecom_networking** 
+**project2_telecom_networking** <br>
 Overview:
 - writing a CRC encoder
 - writing a bit permuter
@@ -41,5 +41,6 @@ For running the programming with piping, here is the command:
 Currently there are no bugs which is known of.
 
 - Overview of solving project: <br>
+
 
 

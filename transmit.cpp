@@ -32,7 +32,7 @@ string longDivison(string frame, string generator){
     // Takes the first bits of the frame
     string bits = frame.substr(0,generator.size());
 
-    // 
+    // bits of zeros for when needed 
     string zeroGen(generator.size(), '0');
 
 
