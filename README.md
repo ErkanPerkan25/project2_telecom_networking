@@ -41,6 +41,10 @@ For running the programming with piping, here is the command:
 Currently there are no bugs which is known of.
 
 - Overview of solving project: <br>
+Starting the project I looked at the CRC encoding scheme and tried to pick out the parts which is its mechanics.
+I found XOR-ing and the long division of the transmited data, so I created functions for both of them. From there
+I started to test both of them to make sure the work. After that I started to merge them to create the whole program.
+I did the same thing for the `flitBit` and `reciver` programs.
 
 
 

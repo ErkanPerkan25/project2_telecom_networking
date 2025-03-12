@@ -2,7 +2,7 @@
 * Author: Eric Hansson
 * Date: 03/08/2025
 * File: transmit.cpp
-* Purpose:  
+* Purpose: To encode data that is being sent to a reciever
 ************************************************************/
 
 #include <iostream>
@@ -14,6 +14,7 @@ using namespace std;
 string XOR(string bits1, string bits2){
     string res = "";
 
+    // Goes throught bits and XOR them
     for(int i=1; i < bits1.size(); i++) {
         if(bits1[i] == bits2[i]){
             res.push_back('0');
